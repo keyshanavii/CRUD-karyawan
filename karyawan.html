@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        .avatar{
+        display: flex;
+        align-items: end;
+      }
+
+      .avatar img{
+        width: 30px;
+        height: 30px;
+        border: solid 1px;
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-4">
+                <div class="card">
+                    <div class="card-header" style="background-color: blue; color: white;">
+                        <h5>Menu</h5>
+                      </div>
+                    <div class="card-body">
+                        <div class="card" style="width: 25rem;">
+                            <ul class="list-group list-group-flush">
+                              <a href="#" class="list-group-item">Daftar Karyawan</a>
+                              <a href="#" class="list-group-item">Tambah Karyawan</a>
+                            </ul>
+                          </div>
+                    </div>
+              </div>
+              </div>
+              <div class="col-8">
+                <div class="card">
+                    <h5 class="card-header" style="background-color: blue; color: white;">Tambah Karyawan</h5>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="namaKaryawan" class="form-label">Nama Karyawan</label>
+                            <input type="text" class="form-control" id="txtNama" placeholder="Masukkan Nama Karyawan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nikKaryawan" class="form-label">NIK Karyawan</label>
+                            <input type="number" class="form-control" id="nikKaryawan" placeholder="Masukkan NIK Karyawan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="masaKerja" class="form-label">Masa Kerja Karyawan (tahun)</label>
+                            <select class="form-select" aria-label="Default select example" id="masaKerja" onchange="listGaji()" required>
+                                <option selected>Pilih Masa Kerja Karyawan</option>
+                                <option value="Masa Training">Masa Training</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gaji" class="form-label">Gaji Karyawan</label>
+                            <input type="value" class="form-control" id="gaji" placeholder="Masukkan Gaji Karyawan" salary>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-info" style="color: white;" onclick="tambahKaryawan()">Simpan</button>
+                          <button type="button" class="btn btn-secondary" onclick="cancel()">Cancel</button>
+                        </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="card" style="width: 62rem; margin-top: 20px; justify-content: center;">
+                    <div class="card-header text-start" style="background-color: blue;">
+                      <h5 style="color: white;">Tambah Karyawan</h5>
+                    </div>
+                    <table class="table" id="tblKaryawan">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Nama</th>
+                          <th>NIK</th>
+                          <th>Masa Kerja</th>
+                          <th>Gaji</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>  
+                  </div>
+                  </div>
+            </div>
+          </div>
+    </div>
+    <script src="./job.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        .avatar{
+        display: flex;
+        align-items: end;
+      }
+
+      .avatar img{
+        width: 30px;
+        height: 30px;
+        border: solid 1px;
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-4">
+                <div class="card">
+                    <div class="card-header" style="background-color: blue; color: white;">
+                        <h5>Menu</h5>
+                      </div>
+                    <div class="card-body">
+                        <div class="card" style="width: 25rem;">
+                            <ul class="list-group list-group-flush">
+                              <a href="#" class="list-group-item">Daftar Siswa</a>
+                              <a href="#" class="list-group-item">Tambah Siswa</a>
+                            </ul>
+                          </div>
+                    </div>
+              </div>
+              </div>
+              <div class="col-8">
+                <div class="card">
+                    <h5 class="card-header" style="background-color: blue; color: white;">Tambah Siswa</h5>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="namasiswa" class="form-label">Nama Siswa</label>
+                            <input type="text" class="form-control" id="txtNama" placeholder="Masukkan nama siswa">
+                        </div>
+                        <div class="mb-3">
+                            <label for="jenKel" class="form-label">Jenis Kelamin</label>
+                            <select class="form-select" aria-label="Default select example" id="jenKel">
+                                <option selected>Pilih Jenis Kelamin</option>
+                                <option value="Laki-Laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="umurSiswa" class="form-label">Umur Siswa</label>
+                            <input type="number" class="form-control" id="umurSiswa" placeholder="Masukkan umur siswa">
+                        </div>
+                        <div class="mb-3">
+                            <label for="wFav" class="form-label">Warna Favorit Siswa</label>
+                            <select class="form-select" aria-label="Default select example" id="wFav">
+                                <option selected>Pilih warna favorit</option>
+                                <option value="Merah">Merah</option>
+                                <option value="Kuning">Kuning</option>
+                                <option value="Biru">Biru</option>
+                                <option value="Hijau">Hijau</option>
+                                <option value="Ungu">Ungu</option>
+                                <option value="Coklat">Coklat</option>
+                            </select>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-info" style="color: white;" onclick="tambahSiswa()">Simpan</button>
+                        <button type="button" class="btn btn-secondary" onclick="cancel()">Cancel</button>
+                        </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="card" style="width: 62rem; margin-top: 20px; justify-content: center;">
+                    <div class="card-header text-start" style="background-color: blue;">
+                      <h5 style="color: white;">Tambah Siswa</h5>
+                    </div>
+                    <table class="table" id="tblSiswa">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Nama</th>
+                          <th>Jenis Kelamin</th>
+                          <th>Umur</th>
+                          <th>Warna</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>  
+                  </div>
+                  </div>
+            </div>
+          </div>
+    </div>
+    <script src="./object.js"></script>
+</body>
+</html>
